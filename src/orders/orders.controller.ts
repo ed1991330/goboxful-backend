@@ -30,6 +30,7 @@ export class OrdersController {
       departamento: order.departamento,
       municipio: order.municipio,
       paquetes: order.productos?.length ?? 0,
+      createdDate: order.createdDate
     }));
   }
 }

@@ -1,4 +1,4 @@
-import { Entity, ObjectIdColumn, ObjectId, Column } from 'typeorm';
+import { Entity, ObjectIdColumn, ObjectId, Column , CreateDateColumn } from 'typeorm';
 
 @Entity()
 export class Order {
@@ -49,4 +49,7 @@ export class Order {
 
   @Column()
   usuarioId: string;
+
+  @CreateDateColumn({ type: 'timestamp' })
+  createdDate: Date;
 }
